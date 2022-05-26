@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
-import type yargs from 'yargs-parser';
 import type { AstroTelemetry } from '@astrojs/telemetry';
-
-import prompts from 'prompts';
+import type yargs from 'yargs-parser';
 import * as msg from '../core/messages.js';
 
 export interface TelemetryOptions {

@@ -1,7 +1,9 @@
-import './shim.js';
-
+// NOTE(fks): Side-effect -- shim.js must run first. This isn't guaranteed by
+// the language, but it is a Node.js behavior that we rely on here. Keep this
+// separate from the other imports so that it doesn't get organized & reordered.
 import type { SSRManifest } from 'astro';
 import { App } from 'astro/app';
+import './shim.js';
 
 export function createExports(manifest: SSRManifest) {
 	const app = new App(manifest);

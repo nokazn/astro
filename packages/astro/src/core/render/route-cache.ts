@@ -7,14 +7,13 @@ import type {
 	RouteData,
 	RSS,
 } from '../../@types/astro';
-import { LogOptions, warn, debug } from '../logger/core.js';
-
-import { generatePaginateFunction } from './paginate.js';
+import { debug, LogOptions, warn } from '../logger/core.js';
 import { stringifyParams } from '../routing/params.js';
 import {
 	validateGetStaticPathsModule,
 	validateGetStaticPathsResult,
 } from '../routing/validation.js';
+import { generatePaginateFunction } from './paginate.js';
 
 type RSSFn = (...args: any[]) => any;
 

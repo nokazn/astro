@@ -1,20 +1,19 @@
-import type { AstroConfig, AstroUserConfig, CLIFlags, ViteUserConfig } from '../@types/astro';
-import type { Arguments as Flags } from 'yargs-parser';
-import type * as Postcss from 'postcss';
-import type { ILanguageRegistration, IThemeRegistration, Theme } from 'shiki';
-import type { RemarkPlugin, RehypePlugin } from '@astrojs/markdown-remark';
-
+import type { RehypePlugin, RemarkPlugin } from '@astrojs/markdown-remark';
+import load, { ProloadError, resolve } from '@proload/core';
+import loadTypeScript from '@proload/plugin-tsm';
 import * as colors from 'kleur/colors';
 import path from 'path';
-import { pathToFileURL, fileURLToPath } from 'url';
-import { mergeConfig as mergeViteConfig } from 'vite';
-import { BUNDLED_THEMES } from 'shiki';
-import { z } from 'zod';
-import load, { resolve, ProloadError } from '@proload/core';
-import loadTypeScript from '@proload/plugin-tsm';
+import type * as Postcss from 'postcss';
 import postcssrc from 'postcss-load-config';
-import { arraify, isObject } from './util.js';
+import type { ILanguageRegistration, IThemeRegistration, Theme } from 'shiki';
+import { BUNDLED_THEMES } from 'shiki';
+import { fileURLToPath, pathToFileURL } from 'url';
+import { mergeConfig as mergeViteConfig } from 'vite';
+import type { Arguments as Flags } from 'yargs-parser';
+import { z } from 'zod';
+import type { AstroConfig, AstroUserConfig, CLIFlags, ViteUserConfig } from '../@types/astro';
 import { appendForwardSlash, prependForwardSlash, trimSlashes } from './path.js';
+import { arraify, isObject } from './util.js';
 
 load.use([loadTypeScript]);
 

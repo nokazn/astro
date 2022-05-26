@@ -1,8 +1,7 @@
 import type { RenderedChunk } from 'rollup';
-import type { PageBuildData, ViteID } from './types';
-
 import { prependForwardSlash } from '../path.js';
 import { viteID } from '../util.js';
+import type { PageBuildData, ViteID } from './types';
 
 export interface BuildInternals {
 	// Pure CSS chunks are chunks that only contain CSS.

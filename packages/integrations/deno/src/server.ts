@@ -1,10 +1,13 @@
-import './shim.js';
+// NOTE(fks): Side-effect -- shim.js must run first. This isn't guaranteed by
+// the language, but it is a Node.js behavior that we rely on here. Keep this
+// separate from the other imports so that it doesn't get organized & reordered.
 import type { SSRManifest } from 'astro';
 import { App } from 'astro/app';
 // @ts-ignore
 import { Server } from 'https://deno.land/std@0.132.0/http/server.ts';
 // @ts-ignore
 import { fetch } from 'https://deno.land/x/file_fetch/mod.ts';
+import './shim.js';
 
 interface Options {
 	port?: number;

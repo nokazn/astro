@@ -1,6 +1,5 @@
-import type { AstroConfig, RoutePart } from '../../../@types/astro';
-
 import { compile } from 'path-to-regexp';
+import type { AstroConfig, RoutePart } from '../../../@types/astro';
 
 export function getRouteGenerator(
 	segments: RoutePart[][],
