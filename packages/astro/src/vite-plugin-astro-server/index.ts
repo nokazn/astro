@@ -380,7 +380,7 @@ export default function createPlugin({ config, logging }: AstroPluginOptions): v
 				removeViteHttpMiddleware(viteServer.middlewares);
 
 				// Push this middleware to the front of the stack so that it can intercept responses.
-				viteServer.middlewares.stack.unshift({ route: '', handle: forceTextCSSForStylesMiddleware });
+				//viteServer.middlewares.stack.unshift({ route: '', handle: forceTextCSSForStylesMiddleware });
 				viteServer.middlewares.use(async (req, res) => {
 					if (!req.url || !req.method) {
 						throw new Error('Incomplete request');
