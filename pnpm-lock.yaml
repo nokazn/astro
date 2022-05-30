@@ -661,6 +661,26 @@ importers:
       chai-as-promised: 7.1.1_chai@4.3.6
       mocha: 9.2.2
 
+  packages/astro-store:
+    specifiers:
+      '@types/chai': ^4.3.1
+      '@types/chai-as-promised': ^7.1.5
+      '@types/mocha': ^9.1.1
+      astro: workspace:*
+      astro-scripts: workspace:*
+      chai: ^4.3.6
+      chai-as-promised: ^7.1.1
+      mocha: ^9.2.2
+    devDependencies:
+      '@types/chai': 4.3.1
+      '@types/chai-as-promised': 7.1.5
+      '@types/mocha': 9.1.1
+      astro: link:../astro
+      astro-scripts: link:../../scripts
+      chai: 4.3.6
+      chai-as-promised: 7.1.1_chai@4.3.6
+      mocha: 9.2.2
+
   packages/astro/e2e/fixtures/astro-component:
     specifiers:
       astro: workspace:*
@@ -1559,6 +1579,7 @@ importers:
 
   packages/integrations/preact:
     specifiers:
+      '@astrojs/store': workspace:*
       '@babel/plugin-transform-react-jsx': ^7.17.12
       astro: workspace:*
       astro-scripts: workspace:*
@@ -1568,12 +1589,14 @@ importers:
       '@babel/plugin-transform-react-jsx': 7.17.12
       preact-render-to-string: 5.2.0_preact@10.7.2
     devDependencies:
+      '@astrojs/store': link:../../astro-store
       astro: link:../../astro
       astro-scripts: link:../../../scripts
       preact: 10.7.2
 
   packages/integrations/react:
     specifiers:
+      '@astrojs/store': workspace:*
       '@babel/plugin-transform-react-jsx': ^7.17.12
       '@types/react': ^17.0.45
       '@types/react-dom': ^17.0.17
@@ -1584,6 +1607,7 @@ importers:
     dependencies:
       '@babel/plugin-transform-react-jsx': 7.17.12
     devDependencies:
+      '@astrojs/store': link:../../astro-store
       '@types/react': 17.0.45
       '@types/react-dom': 17.0.17
       astro: link:../../astro
@@ -1604,6 +1628,7 @@ importers:
 
   packages/integrations/solid:
     specifiers:
+      '@astrojs/store': workspace:*
       astro: workspace:*
       astro-scripts: workspace:*
       babel-preset-solid: ^1.4.2
@@ -1611,12 +1636,14 @@ importers:
     dependencies:
       babel-preset-solid: 1.4.2
     devDependencies:
+      '@astrojs/store': link:../../astro-store
       astro: link:../../astro
       astro-scripts: link:../../../scripts
       solid-js: 1.4.2
 
   packages/integrations/svelte:
     specifiers:
+      '@astrojs/store': workspace:*
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.44
       astro: workspace:*
       astro-scripts: workspace:*
@@ -1630,6 +1657,7 @@ importers:
       svelte-preprocess: 4.10.6_xxnnhi7j46bwl35r5gwl6d4d6q
       vite: 2.9.9
     devDependencies:
+      '@astrojs/store': link:../../astro-store
       astro: link:../../astro
       astro-scripts: link:../../../scripts
       svelte: 3.48.0
@@ -1679,6 +1707,7 @@ importers:
 
   packages/integrations/vue:
     specifiers:
+      '@astrojs/store': workspace:*
       '@vitejs/plugin-vue': ^2.3.3
       astro: workspace:*
       astro-scripts: workspace:*
@@ -1688,6 +1717,7 @@ importers:
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.9+vue@3.2.36
       vite: 2.9.9
     devDependencies:
+      '@astrojs/store': link:../../astro-store
       astro: link:../../astro
       astro-scripts: link:../../../scripts
       vue: 3.2.36
